@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright 2016.刘珅珅
+// author：刘珅珅
+// 格式化输出
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

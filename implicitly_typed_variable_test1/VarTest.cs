@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright 2016.刘珅珅
+// author：刘珅珅
+// 隐式类型变量
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
