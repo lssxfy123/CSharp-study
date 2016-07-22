@@ -13,13 +13,17 @@ namespace exception_test6
     {
         static void Main(string[] args)
         {
-            byte a = 12;
-            byte b = 1;
+            byte a = 127;
+            byte b = 127;
             byte result;
 
             try
             {
                 result = unchecked((byte)(a * b));
+                Console.WriteLine("Unchecked result: " + result);
+
+                result = checked((byte)(a * b));
+                Console.WriteLine("Checked result: " + result);
             }
             catch (OverflowException ex)
             {
