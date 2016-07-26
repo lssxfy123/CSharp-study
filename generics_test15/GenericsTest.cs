@@ -66,6 +66,8 @@ namespace generics_test15
 
             // 协变
             AnotherOp<Alpha, Alpha> del_another_alpha = del_another_beta;
+            objA = del_another_alpha(objA);
+            Console.WriteLine(objA.Val);
         }
     }
 }

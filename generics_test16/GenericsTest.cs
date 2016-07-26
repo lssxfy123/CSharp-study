@@ -38,6 +38,12 @@ namespace generics_test16
     {
         static void Main(string[] args)
         {
+            // 通过断点调试可以看到obj_bar的T的实际类型为string
+            // Test方法的实参类型为IFoo<string>，
+            // 通过obj_bar调用Test方法，传递的实参为IFoo<object>
+            // 如果传递IFoo<string>会发生编译错误，这样就要求
+            // IFoo接口必须具有逆变类型形参，才能从IFoo<object>
+            // 转换成IFoo<string>
             IBar<object> obj_bar = new MyClass<string>();
 
             IFoo<object> obj_foo = new Foo<object>();
