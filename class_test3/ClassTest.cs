@@ -11,7 +11,11 @@ namespace class_test3
 {
     class MyClass
     {
-        private int a, b;
+        private int a;
+        private int b = 3;
+
+        public MyClass() { }
+
         public MyClass(int i, int j)
         {
             a = i;
@@ -33,6 +37,9 @@ namespace class_test3
     {
         static void Main(string[] args)
         {
+            MyClass obj1 = new MyClass();
+            obj1.Show();
+
             MyClass obj = new MyClass(15, 20);
             Console.Write("Before change: ");
             obj.Show();  // 15 20
