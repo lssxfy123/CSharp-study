@@ -16,7 +16,8 @@ namespace event_test5
 
     class KeyEvent
     {
-        public event EventHandler<KeyEventArgs> KeyPress;
+        // public event EventHandler<KeyEventArgs> KeyPress;
+        public  EventHandler<KeyEventArgs> KeyPress;
 
         public void OnKeyPress(char key)
         {
