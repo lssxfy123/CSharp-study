@@ -30,6 +30,8 @@ namespace exception_test1
             {
                 Console.WriteLine("Index out-out-bound.");
             }
+
+            Console.WriteLine("Exception test");  // 会执行这步程序
         }
     }
 }
