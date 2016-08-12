@@ -48,6 +48,8 @@ namespace delegate_test1
         static void Main(string[] args)
         {
             string str;
+
+            // 委托是一个特殊的类型，可以实例化对象
             StringMethod str_method = new StringMethod(ReplaceSpaces);
 
             str = str_method("This is a test.");
