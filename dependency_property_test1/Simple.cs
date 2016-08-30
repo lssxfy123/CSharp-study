@@ -9,6 +9,8 @@ namespace dependency_property_test1
 {
     class Simple:DependencyObject
     {
+        // 为依赖项属性添加属性包装器，
+        // 使其能像普通属性那样使用
         public int YearPublished
         {
             get { return (int)GetValue(YearPublishedProperty); }
