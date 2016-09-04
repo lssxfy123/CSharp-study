@@ -1,4 +1,7 @@
-﻿using System;
+﻿// Copyright 2016.刘珅珅
+// author：刘珅珅
+// 路由事件
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +21,7 @@ namespace routed_event_test1
         public string Location { get; set; }
     }
 
-    class ReportLocationButton:Button
+    public class ReportLocationButton:Button
     {
         // 声明并定于路由事件
         // 向上冒泡的路由事件
@@ -40,7 +43,7 @@ namespace routed_event_test1
 
             ReportedLocationEventArgs args = new ReportedLocationEventArgs(ReportLocationEvent, this);
             args.Location = this.Name;
-            this.RaiseEvent(args);
+            this.RaiseEvent(args);  // 激发路由事件
         }
     }
 }

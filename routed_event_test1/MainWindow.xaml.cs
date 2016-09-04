@@ -24,5 +24,14 @@ namespace routed_event_test1
         {
             InitializeComponent();
         }
+
+        // 路由事件的事件处理函数
+        private void ReportTimeHandler(object sender, ReportedLocationEventArgs e)
+        {
+            e.Location = (sender as FrameworkElement).Name;
+            string l = e.Location;
+            string c = "我到达了: " + l;
+            this.listbox.Items.Add(c);
+        }
     }
 }
