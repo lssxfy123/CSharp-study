@@ -1,0 +1,14 @@
+﻿<Window x:Class="resources_test2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="300" Width="400" FontSize="16">
+    <Window.Resources>
+        <TextBlock x:Key="res1" Text="海上生明月" />
+        <TextBlock x:Key="res2" Text="海上生明月" />
+    </Window.Resources>
+    <StackPanel>
+        <Button Margin="5,5,5,0" Content="{StaticResource res1}" />
+        <Button Margin="5,5,5,0" Content="{DynamicResource res2}" />
+        <Button Margin="5,5,5,0" Content="Upate" Click="Button_Click" />
+    </StackPanel>
+</Window>
