@@ -8,7 +8,7 @@
     <Grid Margin="2">
         <StackPanel Orientation="Horizontal">
             <Image x:Name="imageLogo" Grid.RowSpan="3" Width="64" Height="64" />
-            <StackPanel Margin="5,0">
+            <StackPanel Margin="5,10">
                 <TextBlock x:Name="textBlockName" FontSize="16" FontWeight="Bold" />
                 <TextBlock x:Name="textBlockYear" FontSize="14" />
             </StackPanel>

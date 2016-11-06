@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace template_test1
+namespace template_test2
 {
     /// <summary>
     /// MainWindow.xaml 的交互逻辑
@@ -35,21 +35,8 @@ namespace template_test1
                  new Car() {Automaker = "Lamborghini", Name = "dasatuo",  Year="2001", TopSpeed = "353"}
             };
 
-            foreach (Car car in carList)
-            {
-                CarListItemView view = new CarListItemView();
-                view.Car = car;
-                listBoxCars.Items.Add(view);
-            }
-        }
-
-        private void listBoxCars_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            CarListItemView view = e.AddedItems[0] as CarListItemView;
-            if (view != null)
-            {
-                detailView.Car = view.Car;
-            }
+            // 填充数据源
+            listBoxCars.ItemsSource = carList;
         }
     }
 }

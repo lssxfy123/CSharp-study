@@ -7,8 +7,8 @@
     <ProjectGuid>{3EE367B1-7A9A-45D7-AA4E-A74CD824B3E0}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>template_test1</RootNamespace>
-    <AssemblyName>template_test1</AssemblyName>
+    <RootNamespace>template_test2</RootNamespace>
+    <AssemblyName>template_test2</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -55,14 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="CarDetailView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="CarListItemView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -71,13 +63,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="AutomakerToLogoPathConverter.cs" />
     <Compile Include="Car.cs" />
-    <Compile Include="CarDetailView.xaml.cs">
-      <DependentUpon>CarDetailView.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CarListItemView.xaml.cs">
-      <DependentUpon>CarListItemView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>

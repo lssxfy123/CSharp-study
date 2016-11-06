@@ -17,11 +17,11 @@ using System.Windows.Shapes;
 namespace template_test1
 {
     /// <summary>
-    /// CarListItemView.xaml 的交互逻辑
+    /// CarDetailView.xaml 的交互逻辑
     /// </summary>
-    public partial class CarListItemView : UserControl
+    public partial class CarDetailView : UserControl
     {
-        public CarListItemView()
+        public CarDetailView()
         {
             InitializeComponent();
         }
@@ -35,10 +35,14 @@ namespace template_test1
                 car = value;
                 textBlockName.Text = car.Name;
                 textBlockYear.Text = car.Year;
+                textBlockTopSpeed.Text = car.TopSpeed;
+                textBlockAutomaker.Text = car.Automaker;
+                string uri = string.Format(@"/Resources/Image/{0}.jpg", car.Name);
+                if (File.Exists(uri))
+                {
 
-                // 转义字符@
-                string uriStr = string.Format(@"/Resources/logo/{0}.png", car.Automaker);
-                imageLogo.Source = new BitmapImage(new Uri(uriStr, UriKind.Relative));
+                }
+                imagePhoto.Source = new BitmapImage(new Uri(uri, UriKind.RelativeOrAbsolute));
             }
         }
     }
