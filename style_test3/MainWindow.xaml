@@ -5,16 +5,21 @@
     <Window.Resources>
         <Style TargetType="CheckBox">
             <Style.Triggers>
-                <Trigger Property="IsChecked" Value="true">
-                    <Trigger.Setters>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsChecked" Value="true" />
+                        <Condition Property="Content" Value="正如我悄悄的来" />
+                    </MultiTrigger.Conditions>
+                    <MultiTrigger.Setters>
                         <Setter Property="FontSize" Value="20" />
                         <Setter Property="Foreground" Value="Red" />
-                    </Trigger.Setters>
-                </Trigger>
+                    </MultiTrigger.Setters>
+                </MultiTrigger>
             </Style.Triggers>
         </Style>
     </Window.Resources>
     <StackPanel>
         <CheckBox Content="悄悄的我走了" Margin="5"/>
+        <CheckBox Content="正如我悄悄的来" Margin="5" />
     </StackPanel>
 </Window>
